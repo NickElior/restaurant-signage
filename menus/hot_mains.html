@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hot Mains Menu</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-  </style>
-</head>
-<body>
-  <img src="Hot_Mains.png" alt="Hot Mains menu" />
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot Mains Menu</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="menuImage" alt="Hot mains menu" />
+    <script>
+      const img = document.getElementById("menuImage");
+      const baseUrl =
+        "https://res.cloudinary.com/duvi4tn28/image/upload/hot_mains_menus/hot_mains_menu.png";
+      const timestamp = Date.now(); // milliseconds since epoch
+      img.src = `${baseUrl}?cb=${timestamp}`;
+    </script>
+  </body>
 </html>
